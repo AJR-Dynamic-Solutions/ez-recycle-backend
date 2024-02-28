@@ -1,0 +1,2 @@
+class WhatsAppUsersController < ApplicationController
+end
