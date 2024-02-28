@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :whats_app_users
   resources :recycles
   resources :apartments
   devise_for :users,

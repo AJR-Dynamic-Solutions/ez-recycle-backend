@@ -1,2 +1,0 @@
-class WhatsAppUser < ApplicationRecord
-end
