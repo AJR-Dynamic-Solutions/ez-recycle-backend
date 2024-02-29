@@ -8,6 +8,7 @@ class CreateRecycles < ActiveRecord::Migration[7.1]
       t.string :city
       t.string :state
       t.string :email
+      t.string :whatsapp_user 
       t.text :image
 
       t.timestamps
