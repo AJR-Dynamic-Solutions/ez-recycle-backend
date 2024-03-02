@@ -1,2 +1,0 @@
-class RecyclesController < ApplicationController
-end
