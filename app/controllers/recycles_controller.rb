@@ -12,6 +12,31 @@ class RecyclesController < ApplicationController
             render json: recycle.errors, status: 422
           end
         end
+
+        def update
+          recycle = Recycle.find(params[:id])
+          recycle.update(recycle_params)
+          if recycle.valid?
+            render json: recycle
+        else
+          render json: recycle.errors, status: 422
+          end
+        end
+
+         def destroy
+          recycle = Recycle.find(params[:id])
+          if recycle.destroy
+            render json: recycle
+          else
+            render json: recycle.errors, status: 422
+          end
+        end
+
+        def mylistings
+          user = current_user
+          my_listings = user.recycles
+          render json: my_listings
+        end
       
         private
         def recycle_params

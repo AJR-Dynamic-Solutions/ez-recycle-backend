@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   resources :recycles
-  resources :apartments
   devise_for :users,
     path: '',
     path_names: {
